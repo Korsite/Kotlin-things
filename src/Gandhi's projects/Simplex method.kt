@@ -94,7 +94,7 @@ For S2 -> 160 / 4 = 40
 
 We check which is the most minimum number
 
-
+kkkk
  */
 
 fun getPivotRow(
