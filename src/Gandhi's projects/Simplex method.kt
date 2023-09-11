@@ -133,5 +133,3 @@ fun convertPivotElementIntoOne(
         (1 / pivotElement.toDouble()) * it
     }
 }
-
-fun
