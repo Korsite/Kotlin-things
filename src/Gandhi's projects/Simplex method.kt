@@ -35,7 +35,7 @@ fun main() {
         )
 
 
-    while(rows.last()[indexPivotElement] < 0) {
+    while(rows.last()[indexPivotElement] < 0){
 
         /*
         this variable stores the index where the minus negative number in
@@ -80,11 +80,14 @@ fun main() {
                 )
         }
 
+        indexPivotElement = rows.last()
+            .indexOf(checkTheBiggestNegativeNumber(rows.last()))
+
         rows.forEach {
             println(it)
         }
+        println(indexPivotElement)
     }
-
 }
 
 fun checkTheBiggestNegativeNumber(zList: List<Double>): Double {
@@ -176,7 +179,7 @@ fun getPivotRow(
 
     numbersWhichWillDivide.forEachIndexed { index, numberToDivide ->
         val resultDividedByTheElementFoundInPivotColumn = rows[index].last() / numberToDivide
-        println("${rows[index].last()} / $numberToDivide = $resultDividedByTheElementFoundInPivotColumn")
+// uncomment this        println("${rows[index].last()} / $numberToDivide = $resultDividedByTheElementFoundInPivotColumn")
 
 
         if (resultDividedByTheElementFoundInPivotColumn < lowestNumberWhenDivided){
@@ -253,7 +256,7 @@ fun convertElementIntoZero(
     return listWherePivotElementIsConvertedIntoOne.mapIndexed { index, i ->
 
         // aqui me quede, tengo que encontrar la manera de redondear los numeros
-        //
+        /*
         println("$i * $numberToMultiplyTheListWherePivotElementConvertedIntoOne + ${listToConvert0AtIndexOfPivotElement[index]} = " +
                 "${i* numberToMultiplyTheListWherePivotElementConvertedIntoOne + listToConvert0AtIndexOfPivotElement[index]}"
         )
@@ -264,6 +267,7 @@ fun convertElementIntoZero(
         )
         println()
 
+         */
 
 
         formatTheBigNumbers(i * numberToMultiplyTheListWherePivotElementConvertedIntoOne +
