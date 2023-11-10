@@ -1,40 +1,47 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-class Practica2 {
+import javax.swing.*;
 
-    public static void main(String[] args) throws IOException {
-        InputStreamReader irs = new InputStreamReader(System.in);
-        BufferedReader entrada = new BufferedReader(irs);
-        PrintStream salida = System.out;
-        int a = 0, r = 0;
-        int[][] cal = new int[5][4]; // Matriz para almacenar calificaciones
+public class Ejercicios {
 
-        for (int i = 0; i < 5; i++) {
-            int suma = 0;
-            int c = 1;
+    public static void main(String[] args) {
+        int res=1;
+        int con=0;
 
-            for (int j = 0; j < 3; j++) {
-                salida.println("Introduce calificacion " + c);
-                c++;
-                String b = entrada.readLine();
-                cal[i][j] = Integer.parseInt(b);
-                suma += cal[i][j];
+        person P = new person();
+        person R = new person();
+        P=null;
+        R=null;
+        while (res!=0){
+
+            String resp = JOptionPane.showInputDialog("1. agregar, 2: eliminar, 3: imprimir, 0: salir");
+            res = Integer.parseInt(resp);
+            if (res==1){
+                person Q = new person();
+                String x = JOptionPane.showInputDialog("introduzca un nombre");
+                P = Q.creanodo(x, P, Q);
+
+            }
+            if (res==2){
+                if (P==null)
+                    System.out.println("LA LISTA ESTA VACIA...." );
+                else{
+                    P=P.eliminanodo(P, P);
+                }
+
             }
 
-            cal[i][3] = suma / 3;
-            salida.println("El promedio es = " + cal[i][3]);
+            if (res==3){
+                if (P==null)
+                    System.out.println("LA LISTA ESTA VACIA...." );
+                else{
+                    P.imprimirnodo(P);
+                }
+            }
         }
-
-        for (int j = 0; j < 5; j++) {
-            if (cal[j][3] >= 70)
-                a++;
-            else
-                r++;
-        }
-
-        salida.println("Numero de aprobados: " + a);
-        salida.println("Numero de reprobados: " + r);
     }
 }
+
+
+/**
+ *
+ * @author sistemas y computaci
+ */
