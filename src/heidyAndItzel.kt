@@ -1,5 +1,4 @@
-""/**
- * Inicialicen la funcion principal, lean 2 valores, e impriman lo siguiente:
+/*** Inicialicen la funcion principal, lean 2 valores, e impriman lo siguiente:
  * Suma
  * Resta
  * Division

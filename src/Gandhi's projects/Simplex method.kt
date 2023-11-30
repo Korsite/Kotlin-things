@@ -16,17 +16,13 @@ Z
 
 fun main() {
 
-    val S1 = listOf(0, 80, 92.5, 29, 38, 1, 0, 0, 0, 800).map { it.toDouble() }
-    val S2 = listOf(0, 0,   0,    1, 1,  0, 1, 0, 0, 5).map { it.toDouble() }
-    val S3 = listOf(0, 0,   0,   29, 38, 0, 0, 1, 0, 180).map { it.toDouble() }
-    val S4 = listOf(0, 25,  34,   0, 0,  0, 0, 0, 1, 80).map { it.toDouble() }
-    val Z = listOf( 1, -5, -85, -24,-28, 0, 0, 0, 0, 0).map { it.toDouble() }
+    val S1 = listOf(0, -1, -3, -11).map { it.toDouble() }
+    val S2 = listOf(0, -2, -1, -9).map { it.toDouble() }
+    val Z = listOf(1, -1, -2, 0).map { it.toDouble() }
 
     var rows = listOf(
         S1,
         S2,
-        S3,
-        S4,
         Z
     )
     var indexPivotElement = rows.last()
@@ -87,6 +83,9 @@ fun main() {
             println(it)
         }
         println(indexPivotElement)
+
+        indexPivotElement = rows.last()
+            .indexOf(checkTheBiggestNegativeNumber(rows.last()))
     }
 }
 
@@ -180,6 +179,7 @@ fun getPivotRow(
     numbersWhichWillDivide.forEachIndexed { index, numberToDivide ->
         val resultDividedByTheElementFoundInPivotColumn = rows[index].last() / numberToDivide
 // uncomment this        println("${rows[index].last()} / $numberToDivide = $resultDividedByTheElementFoundInPivotColumn")
+//        println("${rows[index].last()} / $numberToDivide = $resultDividedByTheElementFoundInPivotColumn")
 
 
         if (resultDividedByTheElementFoundInPivotColumn < lowestNumberWhenDivided){
@@ -257,6 +257,9 @@ fun convertElementIntoZero(
 
         // aqui me quede, tengo que encontrar la manera de redondear los numeros
         /*
+=======
+       /*
+>>>>>>> Stashed changes
         println("$i * $numberToMultiplyTheListWherePivotElementConvertedIntoOne + ${listToConvert0AtIndexOfPivotElement[index]} = " +
                 "${i* numberToMultiplyTheListWherePivotElementConvertedIntoOne + listToConvert0AtIndexOfPivotElement[index]}"
         )
@@ -269,6 +272,8 @@ fun convertElementIntoZero(
 
          */
 
+
+        */
 
         formatTheBigNumbers(i * numberToMultiplyTheListWherePivotElementConvertedIntoOne +
                 listToConvert0AtIndexOfPivotElement[index])
