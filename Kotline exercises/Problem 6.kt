@@ -29,7 +29,7 @@ open class Phone(var isScreenLightOn: Boolean){
     }
 }
 
-class FoldablePhone(var PhoneFolded : Boolean = true) : Phone(){
+class FoldablePhone(var PhoneFolded : Boolean = true) : Phone(PhoneFolded){
     var checkPhoneFolded : String = if(PhoneFolded) "Cellphone is folded" else "Cellphone is not folded"
 
     override fun switchOn() {

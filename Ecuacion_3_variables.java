@@ -37,7 +37,7 @@ public class Ecuacion_3_variables{
             System.out.println("Digito el valor de la igualdad " + (i + 1) + ": ");
             valor_igualdad[i] = in.nextInt();
         }
-//Grandhi just suck my pp this night atte: Ángel y Gilberto 21/03/2023
+
         for (int i = 0; i <3; i++) {    // aqui se pasan los datos dados a la matriz z, y, x (en ese orden)
             for (int j = 0; j < 3; j++) {
                 matriz_z[i][j] = valor_x[i];
@@ -322,7 +322,6 @@ public class Ecuacion_3_variables{
         int matriz_y_denominador = matriz_suma - matriz_resta;
         int matriz_z_denominador = matriz_suma - matriz_resta;
         System.out.println("El denominador de la matriz x, y, z sera de: "+ matriz_x_denominador);
-        System.out.println("Mi verga en tu boca persona que esta utilizando este programa");
         System.out.println("---------------------------------------Los resultados son----------------------------------------\n\n");
         System.out.println("X = " + matriz_x_numerador + "/" + matriz_x_denominador + " = " + asFraction(matriz_x_numerador, matriz_x_denominador) + " = " + ((float)matriz_x_numerador/(float)matriz_x_denominador));
         System.out.println("Y = " + matriz_y_numerador + "/" + matriz_y_denominador + " = " + asFraction(matriz_y_numerador, matriz_y_denominador) + " = " + ((float)matriz_y_numerador/(float)matriz_y_denominador));
