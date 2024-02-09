@@ -1,27 +1,23 @@
 import java.util.Scanner;
 
 public class recursividad {
-    public static int numeroAChecar = 1;
     public static int suma = 0;
-
+    public static int numeroPar = 2;
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
 
         System.out.println("Has que numero sumo solamente los pares: ");
         int limiteParaSumar = in.nextInt();
 
-        int sumaDeNumerosPares = sumaSolamentePares(limiteParaSumar);
+        int sumaDeNumerosPares = sumaSolamentePares(limiteParaSumar, 2);
         System.out.println(sumaDeNumerosPares);
     }
-    public  static int sumaSolamentePares(int limiteParaSumar) {
+    public  static int sumaSolamentePares(int limiteParaSumar, int siguienteNumeroPar) {
 
-        if(numeroAChecar <= limiteParaSumar && numeroAChecar % 2 == 0){
-            suma += numeroAChecar;
-            numeroAChecar += 1;
-            return sumaSolamentePares(limiteParaSumar);
-        }else if(numeroAChecar % 2 == 1){
-            numeroAChecar += 1;
-            return  sumaSolamentePares(limiteParaSumar);
+        if(siguienteNumeroPar <= limiteParaSumar){
+            suma += siguienteNumeroPar;
+            numeroPar += 2;
+            return sumaSolamentePares(limiteParaSumar, numeroPar);
         }else return suma;
     }
 }
