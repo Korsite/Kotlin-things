@@ -1,6 +1,6 @@
 package Animals
 
-interface actions {
+interface Actions {
 
     fun eat()
     fun sleep()
