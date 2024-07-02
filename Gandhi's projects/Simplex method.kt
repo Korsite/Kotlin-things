@@ -255,26 +255,6 @@ fun convertElementIntoZero(
 
     return listWherePivotElementIsConvertedIntoOne.mapIndexed { index, i ->
 
-        // aqui me quede, tengo que encontrar la manera de redondear los numeros
-        /*
-=======
-       /*
->>>>>>> Stashed changes
-        println("$i * $numberToMultiplyTheListWherePivotElementConvertedIntoOne + ${listToConvert0AtIndexOfPivotElement[index]} = " +
-                "${i* numberToMultiplyTheListWherePivotElementConvertedIntoOne + listToConvert0AtIndexOfPivotElement[index]}"
-        )
-        println("$i * $numberToMultiplyTheListWherePivotElementConvertedIntoOne + ${listToConvert0AtIndexOfPivotElement[index]} = (rounded) " +
-                "${
-                    formatTheBigNumbers(i* numberToMultiplyTheListWherePivotElementConvertedIntoOne + listToConvert0AtIndexOfPivotElement[index])
-                }"
-        )
-        println()
-
-         */
-
-
-        */
-
         formatTheBigNumbers(i * numberToMultiplyTheListWherePivotElementConvertedIntoOne +
                 listToConvert0AtIndexOfPivotElement[index])
     }
